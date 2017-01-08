@@ -1,6 +1,7 @@
 package pp;
 
 import java.math.BigInteger;
+import java.util.Random;
 import java.util.StringTokenizer;
 
 /**
@@ -11,16 +12,22 @@ public class RSA
     private BigInteger p, q, n,r;
     private BigInteger e, d;
 
-    boolean setPQ(int p, int q)
+    boolean setPQ(String p, String q)
     {
-        this.p = new BigInteger(p + "");
-        this.q = new BigInteger("" + q);
+        this.p = new BigInteger(p);
+        this.q = new BigInteger(q);
         if (this.p.isProbablePrime(10) && this.q.isProbablePrime(10) && !this.p.equals(this.q))
         {
             setClaves();
             return true;
         }
         return false;
+    }
+
+    void generaQP()
+    {
+        p = new BigInteger(10, 10, new Random());
+        q = new BigInteger(10, 10, new Random());
     }
 
     void setClaves()
@@ -72,11 +79,22 @@ public class RSA
 
     public String getN()
     {
-        return "n: "+n;
+        return "n: " + n + " p*q";
     }
 
     public String getR()
     {
-        return "r: "+r;
+        return "r: " + r + " (p-1)*(q-1)";
+    }
+
+    public String getP()
+    {
+        return "" + p;
+
+    }
+
+    public String getQ()
+    {
+        return "" + q;
     }
 }

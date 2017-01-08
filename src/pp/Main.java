@@ -17,7 +17,6 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        new RSA().setPQ(11,17);
         Parent root = FXMLLoader.load(getClass().getResource("Ventana.fxml"));
         primaryStage.setTitle("Cifrado RSA");
         primaryStage.setScene(new Scene(root));

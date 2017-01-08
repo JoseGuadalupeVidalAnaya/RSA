@@ -9,19 +9,25 @@
 <AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pp.Controlador">
    <children>
       <Label layoutX="15.0" layoutY="15.0" text="Numero p" />
-      <TextField layoutX="85.0" layoutY="15.0" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="p" layoutX="85.0" layoutY="15.0" prefHeight="25.0" prefWidth="300.0"/>
       <Label layoutX="15.0" layoutY="55.0" text="Numero q" />
-      <TextField layoutX="85.0" layoutY="55.0" prefHeight="25.0" prefWidth="300.0" />
-      <Button defaultButton="true" layoutX="85.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Aceptar" />
-      <Button cancelButton="true" layoutX="275.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Generar" />
+      <TextField fx:id="q" layoutX="85.0" layoutY="55.0" prefHeight="25.0" prefWidth="300.0"/>
+      <Button fx:id="aceptar" defaultButton="true" layoutX="85.0" layoutY="95.0" mnemonicParsing="false"
+              onAction="#accept" prefHeight="25.0" prefWidth="110.0" text="Aceptar"/>
+      <Button fx:id="generar" cancelButton="true" layoutX="275.0" layoutY="95.0" mnemonicParsing="false"
+              onAction="#gene" prefHeight="25.0" prefWidth="110.0" text="Generar"/>
       <Separator layoutY="135.0" prefHeight="5.0" prefWidth="400.0" />
-      <TextArea disable="true" editable="false" layoutX="15.0" layoutY="155.0" prefHeight="100.0" prefWidth="370.0" />
+      <TextArea fx:id="info" disable="true" editable="false" layoutX="15.0" layoutY="155.0" prefHeight="100.0"
+                prefWidth="370.0"/>
       <Separator layoutY="270.0" prefHeight="5.0" prefWidth="400.0" />
-      <Label disable="true" layoutX="15.0" layoutY="290.0" text="Mensaje" />
-      <TextArea disable="true" layoutX="85.0" layoutY="290.0" prefHeight="75.0" prefWidth="300.0" />
-      <Button defaultButton="true" disable="true" layoutX="85.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Cifrar" />
-      <Button cancelButton="true" disable="true" layoutX="270.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Decifrar" />
-      <TextArea disable="true" editable="false" layoutX="85.0" layoutY="420.0" prefHeight="75.0" prefWidth="300.0" />
-      <Label disable="true" layoutX="15.0" layoutY="420.0" text="Salida" />
+      <Label fx:id="lbmen" disable="true" layoutX="15.0" layoutY="290.0" text="Mensaje"/>
+      <TextArea fx:id="men" disable="true" layoutX="85.0" layoutY="290.0" prefHeight="75.0" prefWidth="300.0"/>
+      <Button fx:id="cifrar" disable="true" layoutX="85.0" layoutY="380.0" mnemonicParsing="false" onAction="#cif"
+              prefHeight="25.0" prefWidth="110.0" text="Cifrar"/>
+      <Button fx:id="decifrar" disable="true" layoutX="270.0" layoutY="380.0" mnemonicParsing="false" onAction="#dec"
+              prefHeight="25.0" prefWidth="110.0" text="Decifrar"/>
+      <TextArea fx:id="out" disable="true" editable="false" layoutX="85.0" layoutY="420.0" prefHeight="75.0"
+                prefWidth="300.0"/>
+      <Label fx:id="lbout" disable="true" layoutX="15.0" layoutY="420.0" text="Salida"/>
    </children>
 </AnchorPane>
