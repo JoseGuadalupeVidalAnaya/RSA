@@ -68,6 +68,7 @@ public class Controlador implements Initializable
         out.setText(rsa.cifrar(men.getText()));
         out.requestFocus();
         out.selectAll();
+        lbout.setDisable(false);
     }
 
     @FXML
