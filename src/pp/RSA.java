@@ -50,7 +50,6 @@ public class RSA
         for (int i = 0; i < b.length; i++)
         {
             c[i] = new BigInteger("" + b[i]);
-            System.out.println(c[i]);
             s = s + c[i].modPow(e, n) + "\t";
         }
         return s;
@@ -92,7 +91,6 @@ public class RSA
     public String getP()
     {
         return "" + p;
-
     }
 
     public String getQ()
