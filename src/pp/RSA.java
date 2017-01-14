@@ -46,7 +46,6 @@ public class RSA
         String s = "";
         byte b[] = men.getBytes();
         BigInteger c[] = new BigInteger[b.length];
-
         for (int i = 0; i < b.length; i++)
         {
             c[i] = new BigInteger("" + b[i]);

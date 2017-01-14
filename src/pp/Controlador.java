@@ -34,7 +34,6 @@ public class Controlador implements Initializable
             if (rsa.setPQ(p.getText(), q.getText()))
             {
                 s = s + rsa.getN() + "\n" + rsa.getR() + "\n" + rsa.getE() + "\n" + rsa.getD() + "\n";
-                info.setText(s);
                 men.setDisable(false);
                 aceptar.setDefaultButton(false);
                 cifrar.setDisable(false);
@@ -50,7 +49,7 @@ public class Controlador implements Initializable
             s = s + "Ingrese numeros en el campo de p\n";
         if (q.getText().isEmpty())
             s = s + "Ingrese numeros en el campo de q\n";
-        //info.setText(s);
+        info.setText(s);
     }
 
     @FXML
