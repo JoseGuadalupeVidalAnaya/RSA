@@ -35,7 +35,6 @@ public class Controlador implements Initializable
             if (rsa.setPQ(p.getText(), q.getText()))
             {
                 s = s + rsa.getN() + "\n" + rsa.getR() + "\n" + rsa.getE() + "\n" + rsa.getD() + "\n";
-                info.setText(s);
                 men.setDisable(false);
                 aceptar.setDefaultButton(false);
                 cifrar.setDisable(false);
