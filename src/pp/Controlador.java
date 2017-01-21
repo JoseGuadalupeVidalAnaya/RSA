@@ -31,6 +31,7 @@ public class Controlador implements Initializable
         String s = "";
         if (!q.getText().isEmpty() && !p.getText().isEmpty())
         {
+
             if (rsa.setPQ(p.getText(), q.getText()))
             {
                 s = s + rsa.getN() + "\n" + rsa.getR() + "\n" + rsa.getE() + "\n" + rsa.getD() + "\n";
@@ -45,12 +46,15 @@ public class Controlador implements Initializable
                 lbmen.setDisable(false);
                 men.requestFocus();
             }
+            else
+                s=s+"Imgrese numeros mayores a 7";
+
         }
         if (p.getText().isEmpty())
             s = s + "Ingrese numeros en el campo de p\n";
         if (q.getText().isEmpty())
             s = s + "Ingrese numeros en el campo de q\n";
-        //info.setText(s);
+        info.setText(s);
     }
 
     @FXML

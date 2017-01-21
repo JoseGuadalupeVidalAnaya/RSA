@@ -16,6 +16,9 @@ public class RSA
     {
         this.p = new BigInteger(p);
         this.q = new BigInteger(q);
+        //System.out.println(p.compareTo("7"));
+        if(this.p.compareTo(new BigInteger("7"))<0||this.q.compareTo(new BigInteger("7"))<0)
+            return false;
         if (this.p.isProbablePrime(10) && this.q.isProbablePrime(10) && !this.p.equals(this.q))
         {
             setClaves();
@@ -50,7 +53,7 @@ public class RSA
         for (int i = 0; i < b.length; i++)
         {
             c[i] = new BigInteger("" + b[i]);
-            s = s + c[i].modPow(e, n) + "\t";
+            s = s + c[i].modPow(e, n) + " ";
         }
         return s;
     }
